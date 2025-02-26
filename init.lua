@@ -227,7 +227,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: My pugins START
+  -- NOTE: My plugins START
   { 'wakatime/vim-wakatime', lazy = false },
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
   -- NOTE: My plugins END
