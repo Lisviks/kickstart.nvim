@@ -227,11 +227,6 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: My plugins START
-  { 'wakatime/vim-wakatime', lazy = false },
-  { 'akinsho/toggleterm.nvim', version = '*', config = true },
-  -- NOTE: My plugins END
-
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
@@ -403,7 +398,11 @@ require('lazy').setup({
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        --pickers = {
+        --  find_files = {
+        --    hidden = true,
+        --  },
+        --},
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -999,7 +998,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
